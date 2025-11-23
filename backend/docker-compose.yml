@@ -1,0 +1,13 @@
+# name: EMP Backend
+services: 
+  postgres: 
+    image: postgres:latest
+    container_name: postgresdb
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: employees
+    ports:
+      - "5432:5432"
+
