@@ -10,4 +10,20 @@ services:
       POSTGRES_DB: employees
     ports:
       - "5432:5432"
-
+  backend:
+    container_name: emp_backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgres://postgres:mysecretpassword@postgres:5432/employees
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app
+      - /app/node_modules
+volumes:
+  pgdata:
