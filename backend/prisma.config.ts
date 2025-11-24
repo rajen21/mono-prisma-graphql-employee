@@ -12,3 +12,9 @@ export default defineConfig({
     url: process.env.DATABASE_URL!,
   },
 });
+
+
+// "prisma": {
+//     "schema": "src/prisma/schema.prisma",
+//     "config": "src/prisma.config.ts"
+//   },

@@ -1,5 +1,16 @@
 import { ObjectType, Field, Int } from 'type-graphql';
-import { Employee } from '../generated/prisma/client';
+
+@ObjectType()
+class Employee {
+  @Field()
+  id: number;
+
+  @Field()
+  name: string;
+
+  @Field()
+  position: string;
+}
 
 @ObjectType()
 export class PaginatedEmployees {

@@ -1,7 +1,5 @@
 import { buildSchema } from 'type-graphql';
 import { EmployeeResolver } from './resolvers/EmployeeResolver';
-import depthLimit from 'graphql-depth-limit';
-import { prisma } from './types/context';
 
 export const createSchema = () =>
   buildSchema({
