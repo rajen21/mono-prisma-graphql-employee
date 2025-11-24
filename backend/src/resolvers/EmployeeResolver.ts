@@ -7,7 +7,7 @@ import {
   Arg,
 } from 'type-graphql';
 // import { PrismaClient } from '@prisma/client';
-import { Prisma } from "../generated/prisma"
+import { Prisma } from "@prisma/client"
 import prisma from '../services/prisma';
 import {
   Employee,
